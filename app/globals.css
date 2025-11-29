@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1220;
+  --card: #121b2e;
+  --text: #e6edf3;
+  --muted: #9fb3c8;
+  --accent: #4f46e5;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+  color: var(--text);
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.card {
+  @apply bg-slate-900/60 border border-slate-700/60 rounded-xl shadow-xl backdrop-blur-sm;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium transition-colors;
+}
+.btn-primary {
+  @apply bg-indigo-600 hover:bg-indigo-500 text-white;
+}
+.btn-secondary {
+  @apply bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-600;
+}
+.input {
+  @apply w-full rounded-lg bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
+.label { @apply text-sm text-slate-300; }
+
+.table {
+  @apply w-full text-left border-separate border-spacing-y-2;
+}
+.table thead th {
+  @apply text-slate-300 font-semibold border-b border-slate-700 pb-2;
+}
+.table tbody tr {
+  @apply hover:bg-slate-800/50;
+}
+.table td { @apply py-3; }
